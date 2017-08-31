@@ -15,7 +15,6 @@ class String
   end
 
   def count_sentences
-    self.split(/[.!]/).size
-    #"This, well, is a sentence. This is too!! And so is this, I think? Woo..."
+    self.split(/[.?[!!]]/).reject(&:empty?).size
   end
 end
